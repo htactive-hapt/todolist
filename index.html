@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Thực Hành Số 2</title>
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+
+    <!-- link css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- <link rel="stylesheet" type="text/css" media='screen and (min-width: 320px)' href="css/responsiveMedia320.css"> -->
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- todo -->
+        <div class="todo-column">
+            <div class="title-column">
+                Todo
+            </div>
+            <ul>
+                <li>Hôm nay ăn gì nhỉ?</li>
+                <li>Hôm nay ăn gì nhỉ?</li>
+            </ul>
+            <div class="todo-container">
+                <ul>
+
+                </ul>
+                <div class="add-todo-button-container">
+                    <button onclick="showInputField()" class="add-todo-button" id="add-todo">+ Thêm thẻ khác</button>
+                </div>
+                <div style="display: none;" id="add-todo-button-container2" class="add-todo-button-container2">
+                    <input type="text" name="task" id="task">
+                    <button class="add-todo" id="add-todo2">+ Thêm đây nè</button>
+                </div>
+                <script>
+                    function showInputField() {
+                        document.getElementById('add-todo').style.display = "none";
+                        document.getElementById('add-todo-button-container2').style.display = "block";
+                    }
+                </script>
+            </div>
+
+        </div>
+
+        <!-- doing -->
+        <div class="todo-column">
+            <div class="title-column">
+                Doing
+            </div>
+            <ul>
+                <li>Ngày mai ăn gì ta?</li>
+            </ul>
+            <div class="add-doing-button-container">
+                <button class="add-doing-button">+ Thêm thẻ khác</button>
+            </div>
+        </div>
+
+        <!-- verify -->
+        <div class="todo-column">
+            <div class="title-column">
+                Verify
+            </div>
+            <ul>
+                <li>Ngày mốt ăn gì nữa?</li>
+            </ul>
+            <div class="add-verify-button-container">
+                <button class="add-verify-button">+ Thêm thẻ khác</button>
+            </div>
+
+        </div>
+
+        <!-- done -->
+        <div class="todo-column">
+            <div class="title-column">
+                Done
+            </div>
+            <ul>
+                <li>Rồi ngày kia ăn gì? Ahihi</li>
+                <li>Rồi ngày kia ăn gì? Ahihi</li>
+            </ul>
+            <div class="add-done-button-container">
+                <button class="add-done-button">+ Thêm thẻ khác</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="./js/script.js"></script>
+
+</html>
