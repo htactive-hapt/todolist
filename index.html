@@ -9,87 +9,90 @@
 
     <!-- link css -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- <link rel="stylesheet" type="text/css" media='screen and (min-width: 320px)' href="css/responsiveMedia320.css"> -->
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="todo-wrapper">
 
         <!-- todo -->
         <div class="todo-column">
             <div class="title-column">
                 Todo
             </div>
-            <ul>
-                <li>Hôm nay ăn gì nhỉ?</li>
-                <li>Hôm nay ăn gì nhỉ?</li>
+            <ul id="listTaskTodo">
             </ul>
             <div class="todo-container">
-                <ul>
-
-                </ul>
-                <div class="add-todo-button-container">
-                    <button onclick="showInputField()" class="add-todo-button" id="add-todo">+ Thêm thẻ khác</button>
+                <button onclick="showField('todo')" class="add-todo-button" id="add-todo">+ Add another card</button>
+                <div style="display: none;" id="add-todo-field" class="add-todo-field">
+                    <input type="text" name="taskTodo" id="taskTodo">
+                    <button onclick="newTask('Todo')">+ Add card</button>
+                    <button class="close-tab" onclick="hideField('todo')">X</button>
                 </div>
-                <div style="display: none;" id="add-todo-button-container2" class="add-todo-button-container2">
-                    <input type="text" name="task" id="task">
-                    <button class="add-todo" id="add-todo2">+ Thêm đây nè</button>
-                </div>
-                <script>
-                    function showInputField() {
-                        document.getElementById('add-todo').style.display = "none";
-                        document.getElementById('add-todo-button-container2').style.display = "block";
-                    }
-                </script>
             </div>
-
         </div>
 
         <!-- doing -->
+
         <div class="todo-column">
             <div class="title-column">
                 Doing
             </div>
-            <ul>
-                <li>Ngày mai ăn gì ta?</li>
+            <ul id="listTaskDoing">
             </ul>
-            <div class="add-doing-button-container">
-                <button class="add-doing-button">+ Thêm thẻ khác</button>
+            <div class="doing-container">
+                <button onclick="showField('doing')" class="add-doing-button" id="add-doing">+ Add another card</button>
+                <div style="display: none;" id="add-doing-field" class="add-doing-field">
+                    <input type="text" name="taskDoing" id="taskDoing">
+                    <button onclick="newTask('Doing')">+ Add card</button>
+                    <button class="close-tab" onclick="hideField('doing')">X</button>
+                </div>
             </div>
         </div>
 
         <!-- verify -->
+
         <div class="todo-column">
             <div class="title-column">
                 Verify
             </div>
-            <ul>
-                <li>Ngày mốt ăn gì nữa?</li>
+            <ul id="listTaskVerify">
             </ul>
-            <div class="add-verify-button-container">
-                <button class="add-verify-button">+ Thêm thẻ khác</button>
+            <div class="verify-container">
+                <button onclick="showField('verify')" class="add-verify-button" id="add-verify">+ Add another card</button>
+                <div style="display: none;" id="add-verify-field" class="add-verify-field">
+                    <input type="text" name="taskVerify" id="taskVerify">
+                    <button onclick="newTask('Verify')">+ Add card</button>
+                    <button class="close-tab" onclick="hideField('verify')">X</button>
+                </div>
             </div>
-
         </div>
 
-        <!-- done -->
+        <!--  done -->
         <div class="todo-column">
             <div class="title-column">
                 Done
             </div>
-            <ul>
-                <li>Rồi ngày kia ăn gì? Ahihi</li>
-                <li>Rồi ngày kia ăn gì? Ahihi</li>
+            <ul id="listTaskDone">
             </ul>
-            <div class="add-done-button-container">
-                <button class="add-done-button">+ Thêm thẻ khác</button>
+            <div class="done-container">
+                <button onclick="showField('done')" class="add-done-button" id="add-done">+ Add another card</button>
+                <div style="display: none;" id="add-done-field" class="add-done-field">
+                    <input type="text" name="taskDone" id="taskDone">
+                    <button onclick="newTask('Done')">+ Add card</button>
+                    <button class="close-tab" onclick="hideField('done')">X</button>
+                </div>
             </div>
         </div>
     </div>
 </body>
-<script type="text/javascript" src="./js/script.js"></script>
+<script type="text/javascript" src="./js/script.js">
+</script>
 
 </html>

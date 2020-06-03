@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" id="button1" value="A-D" style="color:black" onclick="setColor(this, event, '#101010')" ;/>
+    <input type="button" id="button2" value="E-H" style="color:black" onclick="setColor(this, event, '#101010')" ;/>
+    <input type="button" id="button3" value="E-H" style="color:black" onclick="setColor(this, event, '#101010')" ;/>
+</body>
+<script>
+    function hexToRgb(hex) {
+        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+        return result ? 'rgb(' + parseInt(result[1], 16) + ', ' + parseInt(result[2], 16) + ', ' + parseInt(result[3], 16) + ')' : null;
+    }
+
+    function setColor(btnEle, evt,
+        color) {
+        if (btnEle.style.backgroundColor == hexToRgb("#E68352")) {
+            btnEle.style.backgroundColor = "#FFFFFF"
+        } else {
+            btnEle.style.backgroundColor = "#E68352"
+        }
+    }
+</script>
+
+</html>
